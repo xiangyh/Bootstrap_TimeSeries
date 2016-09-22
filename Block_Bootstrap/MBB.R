@@ -4,9 +4,9 @@
 ##=============================
 
 # simulate data
-n <- 100                               
+n <- 120                               
 series <- arima.sim(model=list(ar=0.2),n)                 
-l <- 6                                  
+l <- 4                                 
 B <- 1000                            
 
 stat.Mbt <- rep(NA,B) 
@@ -25,7 +25,9 @@ for(irep in 1:B) {
 }
 
 # > mean(stat.Mbt)
-# [1] -0.2128445
+# [1] -0.09734198
+
 # > sd(stat.Mbt)
-# [1] 0.1324477
+# [1] 0.1264649
+
 # > hist(stat.Mbt)
