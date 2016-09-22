@@ -13,11 +13,11 @@ k <- floor(n/l)
 prob <- n^(-0.3)
 h <- n^(-0.3)
 edge <- floor(n*prob)
-# vessel for the boostrapped values
+
 for(irep in 1:B) {                   # the bootstrap loop
-  series.bt <- rep(NA,k*l)                # local vector for a bootstrap replication
-  for(i in 1:k) {            # fill the vector with random blocks
-    beginpoint <- sample(-edge:edge, size=1)     # by randomly sampling endpoints
+  series.bt <- rep(NA,k*l)                # bootstrap replication
+  for(i in 1:k) {            # random blocks
+    beginpoint <- sample(-edge:edge, size=1)     # sampling beginpoints
     # if j+(i-1)b+Ii is outside the range of interegrs 1 to n
     for(j in 1:l){
       index <- beginpoint + (i-1)*l + j
