@@ -19,7 +19,6 @@ for(j in 1:l){
 }
 wl1 <- sum(w)
 ft<-rep(0,n)
-# vessel for the boostrapped values
 for(irep in 1:B) {                   # the bootstrap loop
   S <- sample(0:(n-l), size=k)     # sample k beginpoint to define S_j in Shao(2011)
   for(t in 1:n){
