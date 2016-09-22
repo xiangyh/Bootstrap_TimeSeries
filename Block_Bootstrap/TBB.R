@@ -20,7 +20,7 @@ for(j in 1:l){
   else w[j] <- (1-t)/c
 }
 f <- w*l^0.5/(sum(w^2)^0.5)
-# vessel for the boostrapped values
+
 for(irep in 1:B) {                   # the bootstrap loop
   series.bt <- rep(NA,k*l)                # bootstrap replication
   for(i in 1:k) {            # random blocks
