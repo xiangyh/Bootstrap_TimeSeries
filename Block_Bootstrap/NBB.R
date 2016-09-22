@@ -13,7 +13,7 @@ stat.fun<-function(x){
 
 stat.Nbt <- rep(NA,B)  
 b <- floor(n/l)
-# vessel for the boostrapped values
+
 for(irep in 1:B) {                   # the bootstrap loop
   sbt <- rep(NA,b*l)                #  bootstrap replication
   for(i in 1:b) {            # random blocks
