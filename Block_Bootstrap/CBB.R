@@ -11,7 +11,7 @@ B <- 1000
 
 stat.Cbt <- rep(NA,B) 
 k <- floor(n/l)
-# vessel for the boostrapped values
+
 series.y <- rep(series,2)
 for(irep in 1:B) {                   # the bootstrap loop
   sbt <- rep(NA,k*l)                #  bootstrap replication
